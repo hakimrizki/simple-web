@@ -7,7 +7,7 @@ metadata:
 spec:
   ports:
   - port: 80
-    targetPort: 3000
+    protocol: http
+    targetPort: 80
   selector:
     app: simple-web
-  type: LoadBalancer

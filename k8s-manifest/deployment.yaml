@@ -21,7 +21,7 @@ spec:
         app: simple-web
     spec:
       containers:
-      - image:  
+      - image: hakimrizki/simple-web  
         imagePullPolicy: Always  
         name: simple-web
         ports:
