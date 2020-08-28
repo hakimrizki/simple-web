@@ -6,15 +6,9 @@ metadata:
   name: simple-web
   namespace: frontend
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: simple-web
-  strategy:
-    rollingUpdate:
-      maxSurge: 4
-      maxUnavailable: 1
-    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -26,10 +20,3 @@ spec:
         name: simple-web
         ports:
         - containerPort: 80
-        resources:
-          requests:
-            cpu: "50m"
-            memory: "128Mi" 
-      imagePullSecrets:
-      - name: ocaregistry
-      restartPolicy: Always
